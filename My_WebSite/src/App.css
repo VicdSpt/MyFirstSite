@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@plugin "@iconify/tailwind4" {
+  /* Optional: make icons slightly larger than text by default */
+  scale: 1.2; 
+}
