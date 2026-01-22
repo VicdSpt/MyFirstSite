@@ -1,22 +1,25 @@
-import React from 'react'
+import React from "react";
+import ResumeIcon from "../images/Resume.svg";
 
 function SectionHeader() {
   return (
-    <header className='fixed top-0 w-full z-10 bg-slate-200'>
+    <header className="fixed top-0 w-full z-10 bg-slate-200">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <nav className='flex gap-4 lg:gap-6'>
-            <a href="">Home</a>
-            <a href="">Portfolio</a>
-            <a href="">Contact</a>
+        <nav className="flex gap-4 lg:gap-6">
+          <a href="">Home</a>
+          <a href="">Portfolio</a>
+          <a href="">Resume</a>
+          <a href="">Contact</a>
         </nav>
         <div>
-            <a href="">
-                <button>Download My CV</button>
-            </a>
+          <a href="">
+            <button> Download My CV</button>
+            <img src={ResumeIcon} alt="" />
+          </a>
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export default SectionHeader
+export default SectionHeader;
