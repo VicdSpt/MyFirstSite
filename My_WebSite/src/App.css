@@ -3,7 +3,9 @@
   /* Optional: make icons slightly larger than text by default */
   scale: 1.2;
 }
+@custom-variant dark (&:where(.dark, .dark *));
 
 body{
   font-family: "poppins", sans-serif;
+  background: #fbf8f5;
 }
