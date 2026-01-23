@@ -10,15 +10,17 @@ import SectionFooter from './components/SectionFooter'
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-white dark:bg-zinc-800">
       <SectionHeader />
-      <SectionFullStackBxl />
-      <SectionAboutMe />
-      {/* <SectionSkills /> */}
-      {/* <SectionProjects /> */}
-      {/* <SectionMoreMe />  */}
+      <main className="flex-grow">
+        <SectionFullStackBxl />
+        <SectionAboutMe />
+        {/* <SectionSkills /> */}
+        {/* <SectionProjects /> */}
+        {/* <SectionMoreMe />  */}
+      </main>
       <SectionFooter />
-    </>
+    </div>
   )
 }
 

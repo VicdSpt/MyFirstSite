@@ -5,42 +5,47 @@ import Profile from '../images/Profile.jpg';
 
 function SectionFooter() {
   return (
-    <footer className="fixed bottom-0 w-full bg-slate-200 z-10">
-      <div className="max-w-5xl mx-auto px-4 py-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <img src={Profile} alt="" className="w-10 h-10 rounded-full" />
-              <span className="font-semibold">Victor dSpt</span>
+    <footer className="bg-slate-200 bottom-0 w-full dark:bg-zinc-900">
+      <div className="max-w-5xl  mx-auto px-4 py-6 sm:py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+          {/* Profile section */}
+          <div className="text-center sm:text-left">
+            <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
+              <img src={Profile} alt="" className="w-10 h-10 rounded-full object-cover" />
+              <span className="font-semibold dark:text-white">Victor dSpt</span>
             </div>
-            <p className="text-gray-600">Full Stack Developer</p>
+            <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Full Stack Developer</p>
           </div>
-          <div className="flex flex-col">
-            <h4 className="font-semibold mb-2">Connect</h4>
-            <nav className="flex flex-col gap-2">
+
+          {/* Connect section */}
+          <div className="text-center sm:text-left">
+            <h4 className="font-semibold mb-2 dark:text-white">Connect</h4>
+            <nav className="flex justify-center sm:justify-start gap-4 sm:flex-col sm:gap-2">
               <a
                 href="https://www.linkedin.com/in/victor-de-spirlet26"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-blue-600 transition-colors"
+                className="flex items-center gap-2 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 <img src={LinkedInIcon} alt="LinkedIn" className="w-5 h-5" />
-                LinkedIn
+                <span className="hidden sm:inline">LinkedIn</span>
               </a>
               <a
                 href="https://github.com/VicdSpt"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-blue-600 transition-colors"
+                className="flex items-center gap-2 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 <img src={GitHubIcon} alt="Github" className="w-5 h-5" />
-                GitHub
+                <span className="hidden sm:inline">GitHub</span>
               </a>
             </nav>
           </div>
         </div>
-        <hr className="border-gray-400 my-4" />
-        <div className="text-sm text-center text-gray-600">
+
+        <hr className="border-gray-400 dark:border-zinc-700 my-4" />
+
+        <div className="text-xs sm:text-sm text-center text-gray-600 dark:text-gray-400">
           <p>{new Date().getFullYear()} - © All Rights Reserved - Victor dS</p>
         </div>
       </div>

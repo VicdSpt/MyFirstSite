@@ -3,7 +3,7 @@ import Profile from '../images/Profile.jpg'
 
 function SectionAboutMe() {
   return (
-    <section className='bg-red-300 py-20'>
+    <section className='py-20 bg-white dark:bg-zinc-800'>
         <div className='max-w-6xl mx-auto px-6'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
                 {/* Left side - Image */}
@@ -13,9 +13,9 @@ function SectionAboutMe() {
 
                 {/* Right side - Text */}
                 <div className='flex flex-col gap-4'>
-                    <h2 className='text-4xl font-bold'>About Me</h2>
-                    <p className='text-lg font-semibold'>This is me</p>
-                    <p className='text-gray-700 leading-relaxed'>
+                    <h2 className='text-4xl font-bold dark:text-white'>About Me</h2>
+                    <p className='text-lg font-semibold dark:text-gray-200'>This is me</p>
+                    <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate accusantium ea quibusdam non nihil. Error doloremque dolore assumenda minus veritatis architecto maiores itaque voluptatibus explicabo ex, nisi mollitia ipsum ea quam totam sapiente doloribus adipisci atque vitae neque ad laboriosam alias. Optio itaque quidem possimus dolores deleniti dolorum doloremque in?
                     </p>
                 </div>

@@ -20,11 +20,8 @@ function SectionHeader() {
     }
   }, [isDark]);
 
-  const navLinkClass =
-    "bg-slate-300 py-2 px-4 hover:bg-slate-500 transition-colors rounded-md";
-
   return (
-    <header className="fixed top-0 w-full z-10 bg-slate-200 shadow-md">
+    <header className="fixed top-0 w-full z-10 bg-slate-200 dark:bg-zinc-900 shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Hamburger button - visible on mobile */}
         <button
@@ -45,32 +42,48 @@ function SectionHeader() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex gap-4 lg:gap-6">
-          <a href="" className={navLinkClass}>
+          <a
+            href=""
+            className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
+          >
             Home
           </a>
-          <a href="" className={navLinkClass}>
+          <a
+            href=""
+            className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
+          >
             Portfolio
           </a>
-          <a href="" className={navLinkClass}>
+          <a
+            href=""
+            className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
+          >
             Resume
           </a>
-          <a href="" className={navLinkClass}>
+          <a
+            href=""
+            className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
+          >
             Contact
           </a>
         </nav>
 
         {/* Right side - Download CV + Theme toggle */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 ">
           <a
             href=""
-            className="flex items-center gap-2 py-2 px-4 rounded-md bg-slate-300 hover:bg-slate-500 transition-colors"
+            className="group flex items-center gap-2 py-2 px-4 rounded-md bg-slate-300 dark:bg-zinc-700 dark:text-white hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors"
           >
-            <img src={ResumeIcon} alt="" className="w-5 h-5" />
+            <img
+              src={ResumeIcon}
+              alt=""
+              className="w-5 h-5 group-hover:brightness-0 group-hover:invert transition-all"
+            />
             <span className="hidden sm:inline">Download My CV</span>
           </a>
 
           {/* Theme toggle */}
-          <div className="bg-zinc-100 dark:bg-zinc-700 p-1 rounded-xl flex">
+          <div className="bg-zinc-300 dark:bg-zinc-700 hover:text-whitep-1 rounded-xl flex">
             <button
               onClick={() => setIsDark(false)}
               className={`p-1.5 rounded-lg cursor-pointer transition-colors ${
@@ -97,35 +110,35 @@ function SectionHeader() {
 
       {/* Mobile nav menu */}
       <nav
-        className={`md:hidden bg-slate-200 border-t border-slate-300 transition-all overflow-hidden ${
+        className={`md:hidden bg-slate-200 dark:bg-zinc-900 border-t border-slate-300 dark:border-zinc-700 transition-all overflow-hidden ${
           isMenuOpen ? "max-h-64 py-4" : "max-h-0"
         }`}
       >
         <div className="container mx-auto px-4 flex flex-col gap-2">
           <a
             href=""
-            className={navLinkClass}
+            className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 transition-colors rounded-md"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </a>
           <a
             href=""
-            className={navLinkClass}
+            className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
             onClick={() => setIsMenuOpen(false)}
           >
             Portfolio
           </a>
           <a
             href=""
-            className={navLinkClass}
+            className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
             onClick={() => setIsMenuOpen(false)}
           >
             Resume
           </a>
           <a
             href=""
-            className={navLinkClass}
+            className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact
