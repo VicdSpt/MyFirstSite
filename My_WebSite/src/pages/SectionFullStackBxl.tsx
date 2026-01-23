@@ -2,7 +2,7 @@ import React from "react";
 
 function SectionFullStackBxl() {
   return (
-    <section className="relative flex flex-col dark:bg-zinc-800">
+    <section className="py-5 relative flex flex-col dark:bg-zinc-800">
       <div className="max-w-7xl mx-auto w-full px-6 pt-30 pb-20">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           {/* Left side - Hero content */}

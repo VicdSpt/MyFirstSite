@@ -18,6 +18,7 @@ function SectionAboutMe() {
                     <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate accusantium ea quibusdam non nihil. Error doloremque dolore assumenda minus veritatis architecto maiores itaque voluptatibus explicabo ex, nisi mollitia ipsum ea quam totam sapiente doloribus adipisci atque vitae neque ad laboriosam alias. Optio itaque quidem possimus dolores deleniti dolorum doloremque in?
                     </p>
+                <button>More about Me</button>
                 </div>
             </div>
         </div>
