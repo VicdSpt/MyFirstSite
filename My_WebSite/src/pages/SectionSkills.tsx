@@ -13,7 +13,7 @@ import GitIcon from "../images/git.png";
 import GitHubIcon from "../images/github.png";
 import MuiIcon from "../images/Mui.png";
 import GearIcon from "../images/Gear.svg";
-import TalkIcon from "../images/Talk.svg";
+import StarIcon from "../images/Star.svg";
 
 function SectionSkills() {
   return (
@@ -27,7 +27,8 @@ function SectionSkills() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           <div>
-            <h3 className="flex items-center gap-2 text-xl font-semibold mb-3 dark:text-white"><img src={GearIcon} alt="Gear Icon" className="h-7 w-7" />HARD SKILLS</h3>
+            <h3 className="flex items-center gap-2 text-xl font-semibold mb-3 dark:text-white">
+              <img src={GearIcon} alt="Gear Icon" className=" h-7 w-7" />HARD SKILLS</h3>
             <div className="flex flex-wrap gap-2">
               <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-stone-50 dark:bg-zinc-700 dark:text-white border border-gray-200 dark:border-zinc-600 hover:bg-stone-100 dark:hover:bg-zinc-600 hover:border-gray-300">
                 <img src={ReactIcon} alt="React" className="h-5 w-5"/>
@@ -84,7 +85,7 @@ function SectionSkills() {
             </div>
           </div>
           <div>
-            <h3 className="flex items-center gap-2 text-xl font-semibold mb-3 dark:text-white"><img src={TalkIcon} alt="Talk Icon" className="h-7 w-7" /> SOFT SKILLS</h3>
+            <h3 className="flex items-center gap-2 text-xl font-semibold mb-3 dark:text-white"><img src={StarIcon} alt="Talk Icon" className="h-7 w-7" /> SOFT SKILLS</h3>
             <div className="flex flex-wrap gap-2">
               <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-blue-50 dark:bg-blue-900/50 dark:text-white border border-blue-300 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-800/50 dark:hover:border-blue-600 hover:border-blue-400">
                 Problem Solver
