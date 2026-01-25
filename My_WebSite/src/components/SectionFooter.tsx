@@ -1,7 +1,7 @@
 import React from "react";
 import LinkedInIcon from "../images/LinkedIn.svg";
 import GitHubIcon from "../images/GitHub.svg";
-import Profile from '../images/Profile.jpg';
+import Profile from '../images/Profile.png';
 
 function SectionFooter() {
   return (

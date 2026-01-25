@@ -4,8 +4,7 @@ import SectionHeader from './components/SectionHeader'
 import SectionFullStackBxl from './pages/SectionFullStackBxl'
 import SectionAboutMe from './pages/SectionAboutMe'
 import SectionSkills from './pages/SectionSkills'
-// import SectionProjects from './pages/SectionProjects'
-// import SectionMoreMe from './pages/SectionMoreMe'
+import SectionContact from './pages/SectionContact'
 import SectionFooter from './components/SectionFooter'
 
 function App() {
@@ -16,8 +15,7 @@ function App() {
         <SectionFullStackBxl />
         <SectionAboutMe />
         <SectionSkills />
-        {/* <SectionProjects /> */}
-        {/* <SectionMoreMe />  */}
+        <SectionContact />
       </main>
       <SectionFooter />
     </div>

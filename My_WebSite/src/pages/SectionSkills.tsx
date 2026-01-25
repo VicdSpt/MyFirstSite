@@ -13,11 +13,11 @@ import GitIcon from "../images/git.png";
 import GitHubIcon from "../images/github.png";
 import MuiIcon from "../images/Mui.png";
 import GearIcon from "../images/Gear.svg";
-import StarIcon from "../images/Star.svg";
+import WaveIcon from "../images/Wave.svg";
 
 function SectionSkills() {
   return (
-    <section className="py-12 sm:py-20 dark:bg-zinc-800">
+    <section className="py-20 sm:py-20 dark:bg-zinc-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-4 sm:gap-6">
         <div className="text-center sm:text-left">
           <h2 className="text-3xl sm:text-4xl font-bold dark:text-white">Skills</h2>
@@ -85,7 +85,7 @@ function SectionSkills() {
             </div>
           </div>
           <div>
-            <h3 className="flex items-center gap-2 text-xl font-semibold mb-3 dark:text-white"><img src={StarIcon} alt="Talk Icon" className="h-7 w-7" /> SOFT SKILLS</h3>
+            <h3 className="flex items-center gap-2 text-xl font-semibold mb-3 dark:text-white"><img src={WaveIcon} alt="Talk Icon" className="h-7 w-7" /> SOFT SKILLS</h3>
             <div className="flex flex-wrap gap-2">
               <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-blue-50 dark:bg-blue-900/50 dark:text-white border border-blue-300 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-800/50 dark:hover:border-blue-600 hover:border-blue-400">
                 Problem Solver
