@@ -3,7 +3,7 @@ import Profile from "../images/Profile.png";
 
 function SectionAboutMe() {
   return (
-    <section className="py-20 dark:bg-zinc-800">
+    <section className="bg-neutral-100 py-20 dark:bg-zinc-800">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Image */}
@@ -29,7 +29,7 @@ function SectionAboutMe() {
               esse. Iste, dolorem deleniti magnam laudantium tempore praesentium
               ducimus dolorum sequi cupiditate, suscipit omnis odit repudiandae?
             </p>
-            <button className=" bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer">
+            <button className="self-center bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer">
               More about Me
             </button>
           </div>

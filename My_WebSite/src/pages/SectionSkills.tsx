@@ -17,9 +17,9 @@ import WaveIcon from "../images/Wave.svg";
 
 function SectionSkills() {
   return (
-    <section className="py-20 sm:py-20 dark:bg-zinc-800">
+    <section className="bg-neutral-100 py-10 sm:py-20 dark:bg-zinc-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-4 sm:gap-6">
-        <div className="text-center sm:text-left">
+        <div className="text-center">
           <h2 className="text-3xl sm:text-4xl font-bold dark:text-white">Skills</h2>
           <p className="text-base sm:text-lg font-semibold dark:text-gray-200 mt-2">
             The things I like

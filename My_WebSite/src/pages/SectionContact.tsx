@@ -3,7 +3,7 @@ import PhoneIcon from "../images/Phone.svg";
 
 function SectionContact() {
   return (
-    <section className="py-20 sm:py-16 md:py-20 dark:bg-zinc-800">
+    <section className="bg-neutral-100 py-20 sm:py-16 md:py-20 dark:bg-zinc-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center gap-6 sm:gap-8">
           <div>
