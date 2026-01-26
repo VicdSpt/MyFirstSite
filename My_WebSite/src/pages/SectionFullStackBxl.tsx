@@ -42,7 +42,7 @@ function TypingAnimation({
 
 function SectionFullStackBxl() {
   const [textToType, setTextToType] = useState(0);
-  const texts = [
+  const myTexts = [
     "I like Solving Problems",
     "If it's Easy, it's not Fun",
     "Debugging is Part of the Fun",
@@ -52,7 +52,7 @@ function SectionFullStackBxl() {
   ];
 
   const handleTypingComplete = () => {
-    setTextToType((prev) => (prev + 1) % texts.length);
+    setTextToType((prev) => (prev + 1) % myTexts.length);
   };
 
   return (
@@ -71,9 +71,9 @@ function SectionFullStackBxl() {
             <p className="text-lg dark:text-gray-300">
               <TypingAnimation
                 key={textToType}
-                text={texts[textToType]}
+                text={myTexts[textToType]}
                 speed={75}
-                className="text-orange-700"
+                className="text-orange-700 dark:text-indigo-500"
                 onComplete={handleTypingComplete}
               />
             </p>

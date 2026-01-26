@@ -1,4 +1,3 @@
-import React from "react";
 import Profile from "../images/Profile.png";
 
 function SectionAboutMe() {
@@ -21,13 +20,9 @@ function SectionAboutMe() {
             <p className="text-lg font-semibold dark:text-gray-200">
               This is me
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-              dolorem nobis iste unde natus velit! Voluptas voluptate
-              perspiciatis incidunt dolorem optio blanditiis nisi, labore
-              aliquid modi consequatur, totam odit id eos quod similique unde
-              esse. Iste, dolorem deleniti magnam laudantium tempore praesentium
-              ducimus dolorum sequi cupiditate, suscipit omnis odit repudiandae?
+            <p className="text-justify text-black dark:text-gray-300">
+              After working almost 6 years in as customer support specialist, in different sectors and companies, I decided to change my career path to become a Full Stack Developer. to build a robust technical foundation, I completed two intensive training programs at <span className="font-bold">Le Wagon</span> and more recently at <span className="font-bold">Wild Code School</span>.<br />
+
             </p>
             <button className="self-center bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer">
               More about Me

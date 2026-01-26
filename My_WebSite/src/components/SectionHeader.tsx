@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 import ResumeIcon from "../images/Resume.svg";
 import Sun from "../images/Sun.svg";
 import Moon from "../images/Moon.svg";
@@ -42,30 +43,30 @@ function SectionHeader() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex gap-4 lg:gap-6">
-          <a
-            href=""
+          <Link
+            to="/"
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
           >
             Home
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            to="/portfolio"
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
           >
             Portfolio
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            to="/resume"
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
           >
             Resume
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            to="/contact"
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
           >
             Contact
-          </a>
+          </Link>
         </nav>
 
         {/* Right side - Download CV + Theme toggle */}
