@@ -5,6 +5,7 @@ import { RouterProvider } from "react-router";
 
 import "./App.css";
 
+import App from "./App.tsx";
 import MainHomePage from "./pages/MainHomePage.tsx";
 import PagePortfolio from "./pages/PagePortfolio.tsx";
 import PageResume from "./pages/PageResume.tsx";
@@ -13,19 +14,25 @@ import PageContact from "./pages/PageContact.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainHomePage />,
-  },
-  {
-    path: "/portfolio",
-    element: <PagePortfolio />,
-  },
-  {
-    path: "/resume",
-    element: <PageResume />,
-  },
-  {
-    path: "/contact",
-    element: <PageContact />,
+    element: <App />,
+    children: [
+      {
+        index: true,
+        element: <MainHomePage />,
+      },
+      {
+        path: "portfolio",
+        element: <PagePortfolio />,
+      },
+      {
+        path: "resume",
+        element: <PageResume />,
+      },
+      {
+        path: "contact",
+        element: <PageContact />,
+      },
+    ],
   },
 ]);
 
@@ -36,4 +43,3 @@ if(roolElement != null){
     <RouterProvider router={router} />
   )
 }
-
