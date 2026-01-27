@@ -6,13 +6,13 @@ import SectionFooter from "./components/SectionFooter.tsx";
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <SectionHeader />
-      <main>
+      <main className="grow">
         <Outlet />
       </main>
       <SectionFooter />
-    </>
+    </div>
   );
 }
 

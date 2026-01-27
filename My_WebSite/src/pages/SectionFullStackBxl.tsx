@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 import SquareIcon from "../images/Square.svg";
 import Belgium from "../images/BE.svg";
 
@@ -106,10 +107,12 @@ function SectionFullStackBxl() {
               new tools and frameworks to strengthen my skills and expand my
               technical expertise.
             </p>
-            <button className="flex items-center gap-2 self-center bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer">
+            <Link 
+            to="/portfolio"
+            className="flex items-center gap-2 self-center bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer">
               <img src={SquareIcon} alt="" />
               Discover my projects
-            </button>
+            </Link>
           </div>
         </div>
       </div>
