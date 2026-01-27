@@ -1,4 +1,5 @@
 
+import { Link } from "react-router";
 import PhoneIcon from "../images/Phone.svg";
 
 function SectionContact() {
@@ -14,13 +15,13 @@ function SectionContact() {
               Let's build something great and fun !
             </p>
           </div>
-          <button
-            onClick={() => { /* navigation logic here */ }}
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer"
           >
             <img src={PhoneIcon} alt="Phone icon" aria-hidden="true" />
             Contact Me
-          </button>
+          </Link>
         </div>
       </div>
     </section>
@@ -28,3 +29,4 @@ function SectionContact() {
 }
 
 export default SectionContact;
+
