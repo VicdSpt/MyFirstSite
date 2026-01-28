@@ -31,7 +31,7 @@ function PagePortfolio() {
     <section className="pt-20 min-h-screen bg-neutral-100 dark:bg-zinc-800">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-5">
-          <h1 className="text-4xl font-bold text-center dark:text-white">My Portfolio</h1>
+          <h1 className="py-20 text-5xl font-bold text-center dark:text-white">My Portfolio</h1>
           <p className="text-center dark:text-gray-200">Discover my projects</p>
         </div>
 

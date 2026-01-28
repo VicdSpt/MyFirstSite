@@ -22,7 +22,7 @@ function SectionHeader() {
   }, [isDark]);
 
   return (
-    <header className="sticky top-0 w-full z-10 bg-slate-200 dark:bg-zinc-900 shadow-md">
+    <header className="fixed top-0 w-full z-10 bg-slate-200 dark:bg-zinc-900 shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Hamburger button - visible on mobile */}
         <button
@@ -77,8 +77,8 @@ function SectionHeader() {
           >
             <img
               src={ResumeIcon}
-              alt=""
-              className="w-5 h-5 group-hover:brightness-0 group-hover:invert transition-all"
+              alt="Resume icon"
+              className="w-5 h-5 dark:invert group-hover:brightness-0 group-hover:invert transition-all"
             />
             <span className="hidden sm:inline">Download My CV</span>
           </a>

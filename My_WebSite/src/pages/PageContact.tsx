@@ -35,18 +35,18 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-100 dark:bg-zinc-800 p-8 lg:p-16 flex items-center justify-center">
+    <section className=" min-h-screen bg-neutral-100 dark:bg-zinc-800 p-8 lg:p-16 flex items-center justify-center">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
-          <h1 className="text-5xl lg:text-6xl font-bold text-black dark:text-white mb-6">
+          <h1 className="py-20 text-5xl lg:text-6xl font-bold text-black dark:text-white mb-6">
             Get in touch
           </h1>
 
           <p className="text-black dark:text-gray-200 leading-relaxed">
-            If you would like to connect or discuss potential opportunities, feel
-            free to get in touch. I would be happy to chat and explore how I can add
-            value to your team.
+            If you would like to connect or discuss potential opportunities,
+            feel free to get in touch. I would be happy to chat and explore how
+            I can add value to your team.
           </p>
           <div className="flex justify-center mt-6">
             <img src={RobinHood} alt="Robin Hood" className="rounded-2xl" />
@@ -159,7 +159,7 @@ const ContactPage: React.FC = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
