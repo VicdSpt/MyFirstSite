@@ -28,7 +28,7 @@ function PagePortfolio() {
   }, []);
 
   return (
-    <section className="pt-40 min-h-screen bg-neutral-100 dark:bg-zinc-800">
+    <section className="pt-20 min-h-screen bg-neutral-100 dark:bg-zinc-800">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-5">
           <h1 className="text-4xl font-bold text-center dark:text-white">My Portfolio</h1>

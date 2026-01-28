@@ -22,7 +22,7 @@ function SectionHeader() {
   }, [isDark]);
 
   return (
-    <header className="fixed top-0 w-full z-10 bg-slate-200 dark:bg-zinc-900 shadow-md">
+    <header className="sticky top-0 w-full z-10 bg-slate-200 dark:bg-zinc-900 shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Hamburger button - visible on mobile */}
         <button
