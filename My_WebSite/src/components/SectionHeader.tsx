@@ -84,7 +84,7 @@ function SectionHeader() {
           </a>
 
           {/* Theme toggle */}
-          <div className="bg-zinc-300 dark:bg-zinc-700 hover:text-whitep-1 rounded-xl flex">
+          <div className="bg-zinc-300 dark:bg-zinc-700 hover:text-whitep-1 rounded-xl flex p-1">
             <button
               onClick={() => setIsDark(false)}
               className={`p-1.5 rounded-lg cursor-pointer transition-colors ${
