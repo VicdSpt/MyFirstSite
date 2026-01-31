@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import Profile from "../images/Profile.png";
 
 function SectionAboutMe() {
@@ -21,12 +22,27 @@ function SectionAboutMe() {
               This is me
             </p>
             <p className="text-justify text-black dark:text-gray-300">
-              After working almost 6 years in as customer support specialist, in different sectors and companies, I decided to change my career path to become a Full Stack Developer. to build a robust technical foundation, I completed two intensive training programs at <span className="font-bold">Le Wagon</span> and more recently at <span className="font-bold">Wild Code School</span>.<br />
-
+              After working almost 6 years in as customer support specialist, in
+              different sectors and companies, I decided to change my career
+              path to become a Full Stack Developer. to build a robust technical
+              foundation, I completed two intensive training programs at{" "}
+              <span className="font-bold">Le Wagon</span> and more recently at{" "}
+              <a
+                href="https://www.wildcodeschool.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-[#f7146b]"
+              >
+                Wild Code School
+              </a>
+              .
             </p>
-            <button className="self-center bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer">
-              More about Me
-            </button>
+            <Link
+              to="moreaboutme"
+              className="self-center bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer"
+            >
+              More About Me
+            </Link>
           </div>
         </div>
       </div>

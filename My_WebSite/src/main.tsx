@@ -9,6 +9,7 @@ import App from "./App.tsx";
 import MainHomePage from "./pages/MainHomePage.tsx";
 import PagePortfolio from "./pages/PagePortfolio.tsx";
 import PageResume from "./pages/PageResume.tsx";
+import MoreAboutMe from "./pages/MoreAboutMe.tsx";
 import PageContact from "./pages/PageContact.tsx";
 
 const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "resume",
         element: <PageResume />,
+      },
+      {
+        path: "moreaboutme",
+        element: <MoreAboutMe />,
       },
       {
         path: "contact",

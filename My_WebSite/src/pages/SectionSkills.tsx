@@ -14,6 +14,9 @@ import GitHubIcon from "../images/github.png";
 import MuiIcon from "../images/Mui.png";
 import GearIcon from "../images/Gear.svg";
 import WaveIcon from "../images/Wave.svg";
+import LanguageIcon from "../images/Language.svg"
+import France from "../images/France.svg"
+import England from "../images/England.svg"
 
 function SectionSkills() {
   return (
@@ -116,6 +119,21 @@ function SectionSkills() {
               </div>
               <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-blue-50 dark:bg-blue-900/50 dark:text-white border border-blue-300 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-800/50 dark:hover:border-blue-600 hover:border-blue-400">
                 Stress Resistant
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 className="flex items-center gap-2 text-xl font-semibold mb-3 dark:text-white">
+              <img src={LanguageIcon} alt="Language icon" className="h-7 w-7" /> LANGUAGES
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-green-50 dark:bg-green-900/50 dark:text-white border border-green-300 dark:border-green-800 hover:bg-green-100 dark:hover:bg-green-800/50 hover:border-green-400 dark:hover:border-green-600">
+                <img src={France} alt="Flag France" className="h-5 w-5" />
+                French - Native
+              </div>
+              <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-green-50 dark:bg-green-900/50 dark:text-white border border-green-300 dark:border-green-800 hover:bg-green-100 dark:hover:bg-green-800/50 hover:border-green-400 dark:hover:border-green-600">
+                <img src={England} alt="Flag UK" className="h-5 w-5" />
+                English - Fluent
               </div>
             </div>
           </div>
