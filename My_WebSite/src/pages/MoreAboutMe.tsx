@@ -17,53 +17,54 @@ const hobbies = [
   {
     title: "Gaming",
     icon: "🎮",
-    description: "Passionnated about video game since ever, my favorite genre are action RPG",
+    description: "Passionate about video games since forever, my favorite genres are action RPGs",
     gradient: "bg-gradient-to-br from-blue-400/40 via-cyan-300/30 to-teal-400/40 dark:from-blue-600/40 dark:via-cyan-500/30 dark:to-teal-600/40 border-blue-400/50 dark:border-blue-500/50 hover:border-blue-500/70 dark:hover:border-blue-400/70",
     size: "col-span-2 md:col-span-2 lg:col-span-2 row-span-2",
   },
   {
     title: "Walking my Dog",
     icon: "🐕",
-    description: "Probably my favorite thing to do, passing quality time with my dog",
+    description: "Probably my favorite thing to do, spending quality time with my dog",
     gradient: "bg-gradient-to-br from-amber-400/40 via-orange-300/30 to-yellow-400/40 dark:from-amber-600/40 dark:via-orange-500/30 dark:to-yellow-600/40 border-amber-400/50 dark:border-amber-500/50 hover:border-amber-500/70 dark:hover:border-amber-400/70",
     size: "col-span-2 md:col-span-2 lg:col-span-2 row-span-2 lg:row-span-4",
   },
   {
     title: "Reading",
     icon: "📚",
-    description: "I love books, I love to read about nothing and everything. Latest book started is: The Witcher serie",
+    description: "I love books. I love reading about everything and nothing. The latest book I've started is: The Witcher series",
     gradient: "bg-gradient-to-br from-emerald-400/40 via-green-300/30 to-teal-400/40 dark:from-emerald-600/40 dark:via-green-500/30 dark:to-teal-600/40 border-emerald-400/50 dark:border-emerald-500/50 hover:border-emerald-500/70 dark:hover:border-emerald-400/70",
     size: "col-span-2 md:col-span-2 lg:col-span-2 row-span-2",
   },
   {
     title: "Motorcycling",
     icon: "🏍️",
-    description: "I have been a biker for the last 5 years, travelling around Europe with my Royal Enfield Himalayan",
+    description: "I have been a biker for the last 5 years, traveling around Europe with my Royal Enfield Himalayan",
     gradient: "bg-gradient-to-br from-red-400/40 via-rose-300/30 to-pink-400/40 dark:from-red-600/40 dark:via-rose-500/30 dark:to-pink-600/40 border-red-400/50 dark:border-red-500/50 hover:border-red-500/70 dark:hover:border-red-400/70",
     size: "col-span-2 md:col-span-2 lg:col-span-2 row-span-2",
   },
   {
     title: "Boxing",
     icon: "🥊",
-    description: "I discovered boxing during covid, now I practise twice a week",
+    description: "I discovered boxing during COVID, and now I practice twice a week",
     gradient: "bg-gradient-to-br from-orange-400/40 via-amber-300/30 to-red-400/40 dark:from-orange-600/40 dark:via-amber-500/30 dark:to-red-600/40 border-orange-400/50 dark:border-orange-500/50 hover:border-orange-500/70 dark:hover:border-orange-400/70",
     size: "col-span-2 md:col-span-2 lg:col-span-2 row-span-2",
   },
   {
     title: "Skiing",
     icon: "⛷️",
-    description: "My all time favorite sport",
+    description: "My all-time favorite sport",
     gradient: "bg-gradient-to-br from-sky-400/40 via-blue-300/30 to-indigo-400/40 dark:from-sky-600/40 dark:via-blue-500/30 dark:to-indigo-600/40 border-sky-400/50 dark:border-sky-500/50 hover:border-sky-500/70 dark:hover:border-sky-400/70",
     size: "col-span-1 md:col-span-1 lg:col-span-1 row-span-2",
   },
   {
     title: "Horse Riding",
     icon: "🏇",
-    description: "Grew-up in the country side, suraround by horse and nature",
+    description: "Grew up in the countryside, surrounded by horses and nature",
     gradient: "bg-gradient-to-br from-yellow-400/40 via-lime-300/30 to-green-400/40 dark:from-yellow-600/40 dark:via-lime-500/30 dark:to-green-600/40 border-yellow-400/50 dark:border-yellow-500/50 hover:border-yellow-500/70 dark:hover:border-yellow-400/70",
     size: "col-span-1 md:col-span-3 lg:col-span-3 row-span-2",
   },
 ];
+
 
 function MoreAboutMe() {
   return (

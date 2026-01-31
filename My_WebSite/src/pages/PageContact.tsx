@@ -1,5 +1,11 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import RobinHood from "../images/RHB.gif";
+
+// TODO: Replace these with your actual EmailJS credentials
+const EMAILJS_SERVICE_ID = "service_6ldgsbf"; // e.g., "service_abc123"
+const EMAILJS_TEMPLATE_ID = "template_zz9rocs"; // e.g., "template_xyz789"
+const EMAILJS_PUBLIC_KEY = "2tOC2UrAMNXIOtVb7"; // e.g., "AbCdEfGhIjK"
 
 interface FormData {
   firstName: string;
@@ -17,6 +23,9 @@ const ContactPage: React.FC = () => {
     phone: "",
     message: "",
   });
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -28,10 +37,34 @@ const ContactPage: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add your form submission logic here
+    setStatus("sending");
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: `${formData.firstName} ${formData.lastName}`,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        EMAILJS_PUBLIC_KEY,
+      );
+      setStatus("success");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setStatus("error");
+    }
   };
 
   return (
@@ -148,13 +181,24 @@ const ContactPage: React.FC = () => {
               />
             </div>
 
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center gap-4">
               <button
                 type="submit"
-                className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-slate-900 cursor-pointer"
+                disabled={status === "sending"}
+                className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-slate-900 cursor-pointer disabled:cursor-not-allowed"
               >
-                Send message
+                {status === "sending" ? "Sending..." : "Send message"}
               </button>
+              {status === "success" && (
+                <p className="text-green-600 dark:text-green-400 font-medium">
+                  Message sent successfully!
+                </p>
+              )}
+              {status === "error" && (
+                <p className="text-red-600 dark:text-red-400 font-medium">
+                  Failed to send message. Please try again.
+                </p>
+              )}
             </div>
           </form>
         </div>
