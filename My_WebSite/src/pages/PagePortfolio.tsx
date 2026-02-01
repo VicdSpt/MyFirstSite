@@ -109,7 +109,7 @@ function PagePortfolio() {
                       href={project.vercel}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-200"
+                      className="flex items-center justify-center gap-2 flex-1 bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition-colors duration-200"
                     > <img src={LiveIcon} alt="Live icon" /> Demo
                     </a>
                   </div>
