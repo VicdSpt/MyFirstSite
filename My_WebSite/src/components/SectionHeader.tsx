@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import ResumeIcon from "../images/Resume.svg";
 import Sun from "../images/Sun.svg";
 import Moon from "../images/Moon.svg";
+import Mon_CV from "../assets/test.pdf"
 
 function SectionHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,10 +70,11 @@ function SectionHeader() {
           </Link>
         </nav>
 
-        {/* Right side - Download CV + Theme toggle */}
+        {/* Right side - Download Mon_CV + Theme toggle */}
         <div className="flex items-center gap-3 ">
           <a
-            href=""
+            href={Mon_CV}
+            download="Resume_de_Spirlet_Victor"
             className="group flex items-center gap-2 py-2 px-4 rounded-md bg-slate-300 dark:bg-zinc-700 dark:text-white hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors"
           >
             <img

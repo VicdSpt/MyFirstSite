@@ -3,9 +3,9 @@ import emailjs from "@emailjs/browser";
 import RobinHood from "../images/RHB.gif";
 
 // TODO: Replace these with your actual EmailJS credentials
-const EMAILJS_SERVICE_ID = "service_6ldgsbf"; // e.g., "service_abc123"
-const EMAILJS_TEMPLATE_ID = "template_zz9rocs"; // e.g., "template_xyz789"
-const EMAILJS_PUBLIC_KEY = "2tOC2UrAMNXIOtVb7"; // e.g., "AbCdEfGhIjK"
+const EMAILJS_SERVICE_ID = "service_6ldgsbf"; 
+const EMAILJS_TEMPLATE_ID = "template_zz9rocs"; 
+const EMAILJS_PUBLIC_KEY = "2tOC2UrAMNXIOtVb7"; 
 
 interface FormData {
   firstName: string;
