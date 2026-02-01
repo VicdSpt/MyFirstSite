@@ -20,7 +20,7 @@ function App() {
     <div className="min-h-screen flex flex-col">
       <ScrollToTop />
       <SectionHeader />
-      <main className="grow">
+      <main className="grow flex flex-col">
         <Outlet />
       </main>
       <SectionFooter />

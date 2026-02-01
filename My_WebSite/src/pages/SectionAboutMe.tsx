@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-import Profile from "../images/icons/Profile.png";
 
 function SectionAboutMe() {
   return (
@@ -10,7 +9,7 @@ function SectionAboutMe() {
           <div className="flex justify-center lg:justify-start">
             <img
               className="w-64 h-64 rounded-full object-cover shadow-lg"
-              src={Profile}
+              src="/images/icons/Profile.png"
               alt="Profile"
             />
           </div>

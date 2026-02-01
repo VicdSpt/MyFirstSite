@@ -1,7 +1,3 @@
-import LinkedInIcon from "../images/icons/LinkedIn.svg";
-import GitHubIcon from "../images/icons/GitHub.svg";
-import Profile from "../images/icons/Profile.png";
-
 function SectionFooter() {
   return (
     <footer className="bg-slate-200 bottom-0 w-full dark:bg-zinc-900">
@@ -11,7 +7,7 @@ function SectionFooter() {
           <div className="text-center">
             <div className="flex items-center justify-center gap-2 mb-2">
               <img
-                src={Profile}
+                src="/images/icons/Profile.png"
                 alt=""
                 className="w-10 h-10 rounded-full object-cover"
               />
@@ -31,7 +27,7 @@ function SectionFooter() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
-                <img src={LinkedInIcon} alt="LinkedIn" className="w-5 h-5" />
+                <img src="/images/icons/LinkedIn.svg" alt="LinkedIn" className="w-5 h-5" />
                 <span>LinkedIn</span>
               </a>
               <a
@@ -40,7 +36,7 @@ function SectionFooter() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
-                <img src={GitHubIcon} alt="Github" className="w-5 h-5" />
+                <img src="/images/icons/Github.svg" alt="Github" className="w-5 h-5" />
                 <span>GitHub</span>
               </a>
             </nav>

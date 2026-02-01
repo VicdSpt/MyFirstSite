@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import ResumeIcon from "../images/icons/Resume.svg";
-import Sun from "../images/icons/Sun.svg";
-import Moon from "../images/icons/Moon.svg";
 import Mon_CV from "../assets/MyCV.pdf"
 
 function SectionHeader() {
@@ -78,7 +75,7 @@ function SectionHeader() {
             className="group flex items-center gap-2 py-2 px-4 rounded-md bg-slate-300 dark:bg-zinc-700 dark:text-white hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors"
           >
             <img
-              src={ResumeIcon}
+              src="/images/icons/Resume.svg"
               alt="Resume icon"
               className="w-5 h-5 dark:invert group-hover:brightness-0 group-hover:invert transition-all"
             />
@@ -95,7 +92,7 @@ function SectionHeader() {
                   : "hover:bg-zinc-200 dark:hover:bg-zinc-600"
               }`}
             >
-              <img src={Sun} alt="Light mode" className="w-4 h-4" />
+              <img src="/images/icons/Sun.svg" alt="Light mode" className="w-4 h-4" />
             </button>
             <button
               onClick={() => setIsDark(true)}
@@ -105,7 +102,7 @@ function SectionHeader() {
                   : "hover:bg-zinc-200 dark:hover:bg-zinc-600"
               }`}
             >
-              <img src={Moon} alt="Dark mode" className="w-4 h-4" />
+              <img src="/images/icons/Moon.svg" alt="Dark mode" className="w-4 h-4" />
             </button>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import RobinHood from "../images/icons/RHB.gif";
 
 // TODO: Replace these with your actual EmailJS credentials
 const EMAILJS_SERVICE_ID = "service_6ldgsbf"; 
@@ -81,7 +80,7 @@ const ContactPage: React.FC = () => {
             I can add value to your team.
           </p>
           <div className="flex justify-center mt-6">
-            <img src={RobinHood} alt="Robin Hood" className="rounded-2xl" />
+            <img src="/images/icons/RHB.gif" alt="Robin Hood" className="rounded-2xl" />
           </div>
         </div>
 

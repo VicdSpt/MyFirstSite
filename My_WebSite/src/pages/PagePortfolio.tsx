@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import GitHubIcon from "../images/icons/GitHub2.svg";
-import LiveIcon from "../images/icons/Live.svg";
-// import { getProjectImage } from "../assets/projectImages";
 
 interface MyProjects {
   id: number;
   title: string;
   description: string;
+  image: string;
   technologies: string[];
   github: string;
   vercel: string;
@@ -37,22 +35,20 @@ function PagePortfolio() {
   }, []);
 
   return (
-    <section className="pt-20 min-h-screen bg-neutral-100 dark:bg-zinc-800">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="pt-20 flex-1 bg-neutral-100 dark:bg-zinc-800">
+      <div className="w-full mx-auto px-10">
         <header className="mb-5">
           <h1 className="py-20 text-5xl font-bold text-center dark:text-white">
             My Portfolio
           </h1>
           <p className="text-center dark:text-gray-200">
             Discover some of my projects, if you wish to see all of them
-            <br />please visit my{" "}
-            <a
+            <br />please visit my <a
               href="https://github.com/VicdSpt"
               target="_blank"
               rel="noopener noreferrer"
               className="text-indigo-500 hover:text-indigo-400"
-            >
-              <span>GitHub</span>
+            > <span>GitHub</span>
             </a>
           </p>
         </header>
@@ -74,7 +70,7 @@ function PagePortfolio() {
             </p>
           )}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {!loading && !error && projects.map((project) => (
               <div
                 key={project.id}
@@ -87,6 +83,9 @@ function PagePortfolio() {
                   <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
                     {project.description}
                   </p>
+                  <div className="aspect-video mb-4 overflow-hidden rounded-2xl">
+                    <img src={project.image} alt="image from project" className="w-full h-full object-cover shadow-2xl"/>
+                  </div>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((techno, index) => (
                       <span
@@ -103,14 +102,14 @@ function PagePortfolio() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 flex-1 bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded-lg transition-colors duration-200"
-                    > <img src={GitHubIcon} alt="GitHub icon" />GitHub
+                    > <img src="/images/icons/Github2.svg" alt="GitHub icon" />GitHub
                     </a>
                     <a
                       href={project.vercel}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 flex-1 bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition-colors duration-200"
-                    > <img src={LiveIcon} alt="Live icon" /> Demo
+                    > <img src="/images/icons/Live.svg" alt="Live icon" /> Demo
                     </a>
                   </div>
                 </div>

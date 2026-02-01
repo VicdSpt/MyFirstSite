@@ -1,6 +1,4 @@
-
 import { Link } from "react-router";
-import PhoneIcon from "../images/icons/Phone.svg";
 
 function SectionContact() {
   return (
@@ -19,7 +17,7 @@ function SectionContact() {
             to="/contact"
             className="inline-flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer"
           >
-            <img src={PhoneIcon} alt="Phone icon" aria-hidden="true" />
+            <img src="/images/icons/Phone.svg" alt="Phone icon" aria-hidden="true" />
             Contact Me
           </Link>
         </div>

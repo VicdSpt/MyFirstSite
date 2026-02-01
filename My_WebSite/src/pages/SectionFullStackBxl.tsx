@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
-import SquareIcon from "../images/icons/Square.svg";
-import Belgium from "../images/icons/BE.svg";
 
 interface TypingAnimationProps {
   text: string;
@@ -67,7 +65,7 @@ function SectionFullStackBxl() {
             </h1>
             <p className="flex items-center gap-2 text-xl font-semibold dark:text-gray-200">
               Fullstack Engineer in Brussels
-              <img src={Belgium} alt="Belgium" className="h-8 w-8" />
+              <img src="/images/icons/BE.svg" alt="Belgium" className="h-8 w-8" />
             </p>
             <p className="text-lg dark:text-gray-300">
               <TypingAnimation
@@ -110,7 +108,7 @@ function SectionFullStackBxl() {
             <Link 
             to="/portfolio"
             className="flex items-center gap-2 self-center bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer">
-              <img src={SquareIcon} alt="" />
+              <img src="/images/icons/Square.svg" alt="" />
               Discover my projects
             </Link>
           </div>

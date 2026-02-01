@@ -3,6 +3,7 @@
     "id": 1,
     "title": "Project du Quiz des Villes",
     "description": "Projet 1 pendant la Wild Code School. Ce projet nous permis de mettre en pratique les bases de HTML, CSS & JavaScript",
+    "image": "",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/VicdSpt/WCS-BigProject-1",
     "vercel": "https://wcs-big-project-1-bial6z48a-victors-projects-65c127e1.vercel.app/"
@@ -11,6 +12,7 @@
     "id": 2,
     "title": "My Todo List in React",
     "description": "Building a todo list with React.ts, using Claude to practice the basics of React.ts",
+    "image": "/images/img-projects/TodoList.png",
     "technologies": [
       "HTML",
       "CSS",
@@ -25,7 +27,8 @@
   {
     "id": 3,
     "title": "Dark Mode in React",
-    "description": "Building a Dark Mode with React.ts to learn more about ",
+    "description": "Building a Dark Mode with React.ts to learn more about it and learn how to implement it in an app",
+    "image": "/images/img-projects/Dark-Light-Mode.png",
     "technologies": [
       "HTML",
       "CSS",
@@ -42,6 +45,7 @@
     "id": 4,
     "title": "Number Guessing Game",
     "description": "Building a Guess the number game, with Claude, to practice HTML, CSS & JavaScript",
+    "image": "/images/img-projects/GuessNumber.png",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/VicdSpt/WCS-Stuff-JS/tree/main/GuessNumber-JS",
     "vercel": "https://wcs-stuff-js.vercel.app/"
@@ -50,6 +54,7 @@
     "id": 5,
     "title": "Memory Game",
     "description": "Building a memory game, with Claude, to practice HTML, CSS & JavaScript",
+    "image": "/images/img-projects/MemoryGame.png",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/VicdSpt/WCS-Stuff-JS/tree/main/MemoryGame",
     "vercel": "https://wcs-stuff-js-ysrv.vercel.app/"
@@ -58,6 +63,7 @@
     "id": 6,
     "title": "Snake Game",
     "description": "Building a Snake game, with Claude, to practice HTML, CSS & JavaScript",
+    "image": "/images/img-projects/SnakeGame.png",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/VicdSpt/WCS-Stuff-JS/tree/main/SnakeGame-JS",
     "vercel": "https://wcs-stuff-js-zr69.vercel.app/"
@@ -65,7 +71,8 @@
   {
     "id": 7,
     "title": "World of Warcraft Characters Search",
-    "description": "Building a World of Warcraft Characters Search.",
+    "description": "Building a World of Warcraft Characters Search Tool to find my characters",
+    "image": "/images/img-projects/WowSearchCharac.png",
     "technologies": [
       "HTML",
       "CSS",
