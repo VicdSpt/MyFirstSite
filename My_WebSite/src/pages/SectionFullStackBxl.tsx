@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
-import SquareIcon from "../images/Square.svg";
-import Belgium from "../images/BE.svg";
+import SquareIcon from "../images/icons/Square.svg";
+import Belgium from "../images/icons/BE.svg";
 
 interface TypingAnimationProps {
   text: string;

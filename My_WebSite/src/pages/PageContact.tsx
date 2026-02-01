@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import RobinHood from "../images/RHB.gif";
+import RobinHood from "../images/icons/RHB.gif";
 
 // TODO: Replace these with your actual EmailJS credentials
 const EMAILJS_SERVICE_ID = "service_6ldgsbf"; 

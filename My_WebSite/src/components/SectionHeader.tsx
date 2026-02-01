@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import ResumeIcon from "../images/Resume.svg";
-import Sun from "../images/Sun.svg";
-import Moon from "../images/Moon.svg";
-import Mon_CV from "../assets/test.pdf"
+import ResumeIcon from "../images/icons/Resume.svg";
+import Sun from "../images/icons/Sun.svg";
+import Moon from "../images/icons/Moon.svg";
+import Mon_CV from "../assets/MyCV.pdf"
 
 function SectionHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

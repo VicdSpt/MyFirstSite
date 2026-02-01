@@ -1,6 +1,6 @@
-import LinkedInIcon from "../images/LinkedIn.svg";
-import GitHubIcon from "../images/GitHub.svg";
-import Profile from "../images/Profile.png";
+import LinkedInIcon from "../images/icons/LinkedIn.svg";
+import GitHubIcon from "../images/icons/GitHub.svg";
+import Profile from "../images/icons/Profile.png";
 
 function SectionFooter() {
   return (

@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import Profile from "../images/Profile.png";
+import Profile from "../images/icons/Profile.png";
 
 function SectionAboutMe() {
   return (

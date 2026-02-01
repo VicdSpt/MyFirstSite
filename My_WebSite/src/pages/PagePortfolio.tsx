@@ -1,73 +1,123 @@
 import { useEffect, useState } from "react";
-import GitHubIcon from "../images/GitHub2.svg";
-import LiveIcon from "../images/Live.svg";
+import GitHubIcon from "../images/icons/GitHub2.svg";
+import LiveIcon from "../images/icons/Live.svg";
+// import { getProjectImage } from "../assets/projectImages";
 
 interface MyProjects {
-  id: string;
-  name: string;
-  productionUrl: string;
-  imageUrl?: string;
-  githubUrl?: string;
+  id: number;
+  title: string;
+  description: string;
+  technologies: string[];
+  github: string;
+  vercel: string;
 }
 
 function PagePortfolio() {
   const [projects, setProjects] = useState<MyProjects[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    async function fetchProjects() {
-      const response = await fetch("https://api.vercel.com/v9/projects", {
-        headers: {
-          Authorization: `Bearer ${import.meta.env.VITE_VERCEL_API_TOKEN}`,
-        },
+    fetch("./MyProjectsData.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to load projects");
+        }
+        return response.json();
+      })
+      .then((data: MyProjects[]) => {
+        setProjects(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Failed to fetch projects:", error);
+        setError("Failed to load projects. Please try again later.");
+        setLoading(false);
       });
-      const data = await response.json();
-
-      setProjects(data.projects);
-    }
-    fetchProjects();
   }, []);
 
   return (
     <section className="pt-20 min-h-screen bg-neutral-100 dark:bg-zinc-800">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="mb-5">
-          <h1 className="py-20 text-5xl font-bold text-center dark:text-white">My Portfolio</h1>
-          <p className="text-center dark:text-gray-200">Discover my projects</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto p-9">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-slate-200 dark:bg-zinc-700 py-5 px-5 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        <header className="mb-5">
+          <h1 className="py-20 text-5xl font-bold text-center dark:text-white">
+            My Portfolio
+          </h1>
+          <p className="text-center dark:text-gray-200">
+            Discover some of my projects, if you wish to see all of them
+            <br />please visit my{" "}
+            <a
+              href="https://github.com/VicdSpt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-500 hover:text-indigo-400"
             >
-              <h2 className="text-xl text-center text-gray-800 dark:text-white mb-3">
-                {project.name}
-              </h2>
-              <hr className="my-4 h-px border-t-0 bg-transparent bg-linear-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
+              <span>GitHub</span>
+            </a>
+          </p>
+        </header>
 
-              <div className="flex gap-3 justify-evenly">
-                <a
-                  href={`https://${project.name}.vercel.app`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 self-center bg-indigo-500 hover:bg-indigo-600 text-white py-3 px-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer"
-                >
-                  <img src={LiveIcon} alt="Live Icon" />
-                  <span className="whitespace-nowrap">Live Demo</span>
-                </a>
-                <a
-                  href="/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 self-center bg-indigo-500 hover:bg-indigo-600 text-white py-3 px-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer"
-                >
-                  <img src={GitHubIcon} alt="Github Icon" /> GitHub
-                </a>
+        <section className="mb-5 py-5 px-4">
+          {loading && (
+            <p className="text-center text-gray-600 dark:text-gray-300">
+              Loading projects...
+            </p>
+          )}
+
+          {error && (
+            <p className="text-center text-red-500">{error}</p>
+          )}
+
+          {!loading && !error && projects.length === 0 && (
+            <p className="text-center text-gray-600 dark:text-gray-300">
+              No projects found.
+            </p>
+          )}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {!loading && !error && projects.map((project) => (
+              <div
+                key={project.id}
+                className="bg-slate-200 dark:bg-slate-700 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="p-6">
+                  <h2 className="text-2xl text-center font-bold text-gray-800 dark:text-white mb-3">
+                    {project.title}
+                  </h2>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies.map((techno, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-sm rounded-full font-medium"
+                      >
+                        {techno}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex gap-3">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 flex-1 bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded-lg transition-colors duration-200"
+                    > <img src={GitHubIcon} alt="GitHub icon" />GitHub
+                    </a>
+                    <a
+                      href={project.vercel}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-200"
+                    > <img src={LiveIcon} alt="Live icon" /> Demo
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </section>
       </div>
     </section>
   );

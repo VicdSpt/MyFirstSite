@@ -1,6 +1,6 @@
 
 import { Link } from "react-router";
-import PhoneIcon from "../images/Phone.svg";
+import PhoneIcon from "../images/icons/Phone.svg";
 
 function SectionContact() {
   return (
