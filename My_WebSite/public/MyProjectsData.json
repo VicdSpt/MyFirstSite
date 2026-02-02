@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Project du Quiz des Villes",
-    "description": "Projet 1 pendant la Wild Code School. Ce projet nous permis de mettre en pratique les bases de HTML, CSS & JavaScript",
+    "description": "Projet 1. Ce projet nous permis de mettre en pratique les bases de HTML, CSS & JS",
     "image": "",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/VicdSpt/WCS-BigProject-1",
@@ -27,7 +27,7 @@
   {
     "id": 3,
     "title": "Dark Mode in React",
-    "description": "Building a Dark Mode with React.ts to learn more about it and learn how to implement it in an app",
+    "description": "Building a Dark Mode with React.ts to learn how to implement it in an app",
     "image": "/images/img-projects/Dark-Light-Mode.png",
     "technologies": [
       "HTML",
@@ -70,7 +70,7 @@
   },
   {
     "id": 7,
-    "title": "World of Warcraft Characters Search",
+    "title": "WoW Characters Search",
     "description": "Building a World of Warcraft Characters Search Tool to find my characters",
     "image": "/images/img-projects/WowSearchCharac.png",
     "technologies": [
