@@ -6,7 +6,7 @@
     "image": "",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/VicdSpt/WCS-BigProject-1",
-    "vercel": "https://wcs-big-project-1-bial6z48a-victors-projects-65c127e1.vercel.app/"
+    "vercel": "https://wcs-project-1-cityquiz.vercel.app/"
   },
   {
     "id": 2,
@@ -22,7 +22,7 @@
       "Vite"
     ],
     "github": "https://github.com/VicdSpt/WCS-Stuff-React/tree/main/ToDoList-React",
-    "vercel": "https://wcs-stuff-react-1v5m-an02npjf2-victors-projects-65c127e1.vercel.app/"
+    "vercel": "https://wcs-todo-list.vercel.app/"
   },
   {
     "id": 3,
@@ -39,7 +39,7 @@
       "Tailwind"
     ],
     "github": "https://github.com/VicdSpt/WCS-Stuff-React/tree/main/Dark-Light-Mode",
-    "vercel": "https://wcs-stuff-react.vercel.app/"
+    "vercel": "https://wcs-darkmode.vercel.app/"
   },
   {
     "id": 4,
@@ -48,7 +48,7 @@
     "image": "/images/img-projects/GuessNumber.png",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/VicdSpt/WCS-Stuff-JS/tree/main/GuessNumber-JS",
-    "vercel": "https://wcs-stuff-js.vercel.app/"
+    "vercel": "https://wcs-guess-number-game.vercel.app/"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "image": "/images/img-projects/MemoryGame.png",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/VicdSpt/WCS-Stuff-JS/tree/main/MemoryGame",
-    "vercel": "https://wcs-stuff-js-ysrv.vercel.app/"
+    "vercel": "https://wcs-memory-game.vercel.app/"
   },
   {
     "id": 6,
@@ -66,7 +66,7 @@
     "image": "/images/img-projects/SnakeGame.png",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/VicdSpt/WCS-Stuff-JS/tree/main/SnakeGame-JS",
-    "vercel": "https://wcs-stuff-js-zr69.vercel.app/"
+    "vercel": "https://wcs-snake-game.vercel.app/"
   },
   {
     "id": 7,
@@ -83,6 +83,6 @@
       "Mui"
     ],
     "github": "https://github.com/VicdSpt/WoW-Search/tree/main/WoWSearch",
-    "vercel": "https://wo-w-search.vercel.app/"
+    "vercel": "https://wow-search.vercel.app/"
   }
 ]
