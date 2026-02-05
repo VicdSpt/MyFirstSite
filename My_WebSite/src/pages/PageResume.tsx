@@ -180,16 +180,13 @@ const MyTimeline = () => {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-8 sm:py-12 md:py-16 px-4 sm:px-6 flex items-center justify-center">
+    <section className="pt-20 min-h-screen bg-neutral-100 dark:bg-zinc-800 py-8 sm:py-12 md:py-16 px-4 sm:px-6 flex items-center justify-center">
       <div className="max-w-7xl mx-auto w-full">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-14 md:mb-20">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3">
+          <h1 className="pt-20 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3">
             My Professional Journey
           </h1>
-          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300">
-            From {formatDate(timelineData[0].startDate)} to Today
-          </p>
           <p className="text-sm sm:text-base text-gray-400 dark:text-gray-500 mt-3">
             👆 Swipe or drag to explore
           </p>
@@ -318,7 +315,7 @@ const MyTimeline = () => {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

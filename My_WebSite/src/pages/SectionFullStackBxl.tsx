@@ -30,11 +30,10 @@ function TypingAnimation({
     }
   }, [currentIndex, text, speed, onComplete]);
 
-
   return (
-    <div className={`font-mono ${className} text-2xl`}>
+    <div className={`font-mono ${className} text-2xl`} aria-live="polite">
       {displayedText}
-      <span className="animate-pulse">|</span>
+      <span className="animate-pulse" aria-hidden="true">|</span>
     </div>
   );
 }
@@ -47,7 +46,7 @@ function SectionFullStackBxl() {
     "Debugging is Part of the Fun",
     "Work is a Pleasure",
     "Building Fun Stuff for People",
-    "Learning Every Day"
+    "Learning Every Day",
   ];
 
   const handleTypingComplete = () => {
@@ -65,7 +64,13 @@ function SectionFullStackBxl() {
             </h1>
             <p className="flex items-center gap-2 text-xl font-semibold dark:text-gray-200">
               Fullstack Engineer in Brussels
-              <img src="/images/icons/BE.svg" alt="Belgium" className="h-8 w-8" />
+              <img
+                src="/images/icons/BE.svg"
+                alt="Belgium"
+                className="h-8 w-8"
+                width={32}
+                height={32}
+              />
             </p>
             <p className="text-lg dark:text-gray-300">
               <TypingAnimation
@@ -90,9 +95,9 @@ function SectionFullStackBxl() {
               >
                 Wild Code School
               </a>
-              , I am driven by a strong passion for{" "}
-              <span className="font-bold">problem solving</span> and{" "}
-              <span className="font-bold">debugging</span> complex challenges to
+              , I am driven by a strong passion for
+              <span className="font-bold"> problem solving</span> and
+              <span className="font-bold"> debugging</span> complex challenges to
               build reliable, high-quality web applications.
               <br /> I enjoy transforming ideas into efficient, user-focused
               solutions while working with modern technologies and continuously
@@ -105,12 +110,15 @@ function SectionFullStackBxl() {
               new tools and frameworks to strengthen my skills and expand my
               technical expertise.
             </p>
-            <Link 
-            to="/portfolio"
-            className="flex items-center gap-2 self-center bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer">
-              <img src="/images/icons/Square.svg" alt="" />
-              Discover my projects
-            </Link>
+            <div className="self-center">
+              <Link
+                to="/portfolio"
+                className="flex items-center gap-2 self-center bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              >
+                <img src="/images/icons/Square.svg" alt="" />
+                Discover my projects
+              </Link>
+            </div>
           </div>
         </div>
       </div>

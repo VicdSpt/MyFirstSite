@@ -7,7 +7,7 @@ function SectionFooter() {
           <div className="text-center">
             <div className="flex items-center justify-center gap-2 mb-2">
               <img
-                src="/images/icons/Profile.png"
+                src="/images/icons/Profile2.jpg"
                 alt=""
                 className="w-10 h-10 rounded-full object-cover"
               />

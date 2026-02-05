@@ -7,17 +7,17 @@ function SectionContact() {
         <div className="flex flex-col items-center text-center gap-6 sm:gap-8">
           <div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold dark:text-white">
-              Want to work together ?
+              Want to work together?
             </h2>
             <p className="text-sm sm:text-base md:text-lg font-semibold dark:text-gray-200 mt-2">
-              Let's build something great and fun !
+              Let's build something great and fun!
             </p>
           </div>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-400"
           >
-            <img src="/images/icons/Phone.svg" alt="Phone icon" aria-hidden="true" />
+            <img src="/images/icons/Phone.svg" aria-hidden="true"/>
             Contact Me
           </Link>
         </div>

@@ -84,7 +84,7 @@ function PagePortfolio() {
                     {project.description}
                   </p>
                   <div className="aspect-video mb-4 overflow-hidden rounded-2xl">
-                    <img src={project.image} alt="image from project" className="w-full h-full object-cover shadow-2xl"/>
+                    <img src={project.image} alt={`Screenshot of ${project.title}`} className="w-full h-full object-cover shadow-2xl"/>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((techno, index) => (
@@ -101,15 +101,19 @@ function PagePortfolio() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 flex-1 bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded-lg transition-colors duration-200"
-                    > <img src="/images/icons/Github2.svg" alt="GitHub icon" />GitHub
+                      className="flex items-center justify-center gap-2 flex-1 bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                    >
+                      <img src="/images/icons/Github2.svg" alt="" aria-hidden="true" width={20} height={20} />
+                      GitHub
                     </a>
                     <a
                       href={project.vercel}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 flex-1 bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition-colors duration-200"
-                    > <img src="/images/icons/Live.svg" alt="Live icon" /> Demo
+                      className="flex items-center justify-center gap-2 flex-1 bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                    >
+                      <img src="/images/icons/Live.svg" alt="" aria-hidden="true" width={20} height={20} />
+                      Demo
                     </a>
                   </div>
                 </div>
