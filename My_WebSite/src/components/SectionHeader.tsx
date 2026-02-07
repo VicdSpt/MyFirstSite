@@ -72,14 +72,14 @@ function SectionHeader() {
           <a
             href={Mon_CV}
             download="Resume_de_Spirlet_Victor"
-            className="group flex items-center gap-2 py-2 px-4 rounded-md bg-slate-300 dark:bg-zinc-700 dark:text-white hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors"
+            className="group flex items-center gap-2 py-2 px-4 rounded-md bg-slate-300 dark:bg-zinc-700 dark:text-white hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors whitespace-nowrap"
           >
             <img
               src="/images/icons/Resume.svg"
               alt="Resume icon"
               className="w-5 h-5 dark:invert group-hover:brightness-0 group-hover:invert transition-all"
             />
-            <span className="hidden sm:inline">Download My CV</span>
+            <span className="hidden md:inline">Downlod my CV</span>
           </a>
 
           {/* Theme toggle */}

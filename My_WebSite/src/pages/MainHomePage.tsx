@@ -7,11 +7,11 @@ import SectionContact from "./SectionContact";
 function MainHomePage() {
   return (
     <div>
-      {/* Hero - simple fade in on load */}
+      {/* Hero - smooth fade in */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
       >
         <SectionFullStackBxl />
       </motion.div>
@@ -21,7 +21,7 @@ function MainHomePage() {
         initial={{ opacity: 0, x: -80 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
       >
         <SectionAboutMe />
       </motion.div>
@@ -31,7 +31,7 @@ function MainHomePage() {
         initial={{ opacity: 0, x: 80 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
       >
         <SectionSkills />
       </motion.div>
@@ -41,7 +41,7 @@ function MainHomePage() {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
       >
         <SectionContact />
       </motion.div>
