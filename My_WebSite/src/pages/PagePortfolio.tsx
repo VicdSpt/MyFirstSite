@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 interface MyProjects {
   id: number;
@@ -71,9 +72,16 @@ function PagePortfolio() {
           )}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {!loading && !error && projects.map((project) => (
-              <div
+            {!loading && !error && projects.map((project, index) => (
+              <motion.div
                 key={project.id}
+                initial={{ opacity: 0, scale: 1.15 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.3,
+                  ease: "easeOut"
+                }}
                 className="bg-slate-200 dark:bg-slate-700 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="p-6">
@@ -117,7 +125,7 @@ function PagePortfolio() {
                     </a>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>

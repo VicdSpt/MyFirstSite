@@ -4,6 +4,7 @@ interface HobbyCardProps {
   description: string;
   gradient: string;
   className?: string;
+  size: string
 }
 
 const hobbies = [
@@ -65,7 +66,6 @@ const hobbies = [
   },
 ];
 
-
 function MoreAboutMe() {
   return (
     <section className="pt-20 min-h-screen bg-neutral-100 dark:bg-zinc-800">
@@ -90,6 +90,7 @@ function MoreAboutMe() {
               description={hobby.description}
               gradient={hobby.gradient}
               className={hobby.size}
+              size={hobby.size}
             />
           ))}
         </div>
