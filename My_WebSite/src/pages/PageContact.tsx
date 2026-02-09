@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "motion/react";
 import emailjs from "@emailjs/browser";
 
 // TODO: Replace these with your actual EmailJS credentials
@@ -70,7 +71,12 @@ const ContactPage: React.FC = () => {
     <section className=" min-h-screen bg-neutral-100 dark:bg-zinc-800 p-8 lg:p-16 flex items-center justify-center">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-5">
+        <motion.div
+          className="text-center mb-5"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+        >
           <h1 className="py-20 text-5xl font-bold text-center text-black dark:text-white mb-4">
             Get in touch
           </h1>
@@ -82,10 +88,14 @@ const ContactPage: React.FC = () => {
           <div className="flex justify-center mt-6">
             <img src="/images/icons/RHB.gif" alt="Robin Hood" className="rounded-2xl" />
           </div>
-        </div>
+        </motion.div>
 
         {/* Contact Form */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+        >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -199,7 +209,7 @@ const ContactPage: React.FC = () => {
               )}
             </div>
           </form>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
