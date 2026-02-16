@@ -77,7 +77,7 @@ const ContactPage: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
         >
-          <h1 className="py-20 text-5xl font-bold text-center text-black dark:text-white mb-4">
+          <h1 className="py-20 text-5xl font-bold text-center text-black dark:text-white">
             Get in touch
           </h1>
           <p className="text-black dark:text-gray-200 leading-relaxed">
