@@ -6,6 +6,8 @@ import ageCalculator from  "../images/img-projects/AgeCalculator.png"
 import guessNumber from "../images/img-projects/GuessNumber.png"
 import memoryGame from "../images/img-projects/MemoryGame.png"
 import snakeGame from "../images/img-projects/SnakeGame.png"
+import Projet_1 from "../images/img-projects/Projet_1.png";
+import Projet_2 from "../images/img-projects/Projet_2.png";
 
 // Map project names to their preview images
 export const projectImages: Record<string, string> = {
@@ -16,7 +18,9 @@ export const projectImages: Record<string, string> = {
   "age-calculator": ageCalculator,
   "guess-number-game": guessNumber,
   "memory-game": memoryGame,
-  "snake-game": snakeGame
+  "snake-game": snakeGame,
+  "projet-1": Projet_1,
+  "projet-2": Projet_2,
 };
 
 // Fallback: generates a screenshot URL using thum.io if no custom image is set

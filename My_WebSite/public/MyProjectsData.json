@@ -3,13 +3,22 @@
     "id": 1,
     "title": "Project du Quiz des Villes",
     "description": "Projet 1. Ce projet nous permis de mettre en pratique les bases de HTML, CSS & JS",
-    "image": "",
+    "image": "/images/img-projects/Projet_1.png",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/VicdSpt/WCS-BigProject-1",
     "vercel": "https://wcs-project-1-cityquiz.vercel.app/"
   },
   {
     "id": 2,
+    "title": "Project StrasFleurs",
+    "description": "Projet 2. Création d'une boutique en ligne pour la venter et réservation de fleurs",
+    "image": "/images/img-projects/Projet_2.png",
+    "technologies": ["HTML", "CSS", "tailwind", "React", "TypeScript", "Vite"],
+    "github": "https://github.com/VicdSpt/WCS-Project-2-StrasFleurs",
+    "vercel": "https://wcs-project-2-strasfleurs.vercel.app/"
+  },
+  {
+    "id": 3,
     "title": "My Todo List in React",
     "description": "Building a todo list with React.ts, using Claude to practice the basics of React.ts",
     "image": "/images/img-projects/TodoList.png",
@@ -25,7 +34,7 @@
     "vercel": "https://wcs-todo-list.vercel.app/"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Dark Mode in React",
     "description": "Building a Dark Mode with React.ts to learn how to implement it in an app",
     "image": "/images/img-projects/Dark-Light-Mode.png",
@@ -42,7 +51,7 @@
     "vercel": "https://wcs-darkmode.vercel.app/"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Number Guessing Game",
     "description": "Building a Guess the number game, with Claude, to practice HTML, CSS & JavaScript",
     "image": "/images/img-projects/GuessNumber.png",
@@ -51,7 +60,7 @@
     "vercel": "https://wcs-guess-number-game.vercel.app/"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Memory Game",
     "description": "Building a memory game, with Claude, to practice HTML, CSS & JavaScript",
     "image": "/images/img-projects/MemoryGame.png",
@@ -60,7 +69,7 @@
     "vercel": "https://wcs-memory-game.vercel.app/"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Snake Game",
     "description": "Building a Snake game, with Claude, to practice HTML, CSS & JavaScript",
     "image": "/images/img-projects/SnakeGame.png",
@@ -69,7 +78,7 @@
     "vercel": "https://wcs-snake-game.vercel.app/"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "WoW Characters Search",
     "description": "Building a World of Warcraft Characters Search Tool to find my characters",
     "image": "/images/img-projects/WowSearchCharac.png",
