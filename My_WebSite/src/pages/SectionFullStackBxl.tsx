@@ -73,6 +73,9 @@ function SectionFullStackBxl() {
                 height={32}
               />
             </p>
+            <p className="text-xl font-medium text-indigo-600 dark:text-indigo-400">
+              📍 {t.hero.relocation}
+            </p>
             <p className="text-lg dark:text-gray-300">
               <TypingAnimation
                 key={`${lang}-${textToType}`}

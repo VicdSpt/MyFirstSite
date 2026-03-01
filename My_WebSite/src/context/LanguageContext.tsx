@@ -8,6 +8,7 @@ const translations = {
     },
     hero: {
       subtitle: "Fullstack Engineer in Brussels",
+      relocation: "Open to relocation (Lille, Paris)",
       typingTexts: [
         "I like Solving Problems",
         "If it's Easy, it's not Fun",
@@ -40,7 +41,7 @@ const translations = {
       softSkillsList: [
         "Problem Solver", "Dynamic", "Communication", "Team Work",
         "Open Minded", "Organized & Structured", "Time Management",
-        "Autonomy", "Fast learner", "Stress Resistant",
+        "Autonomy", "Fast Learner", "Stress Resistant",
       ],
       languagesList: ["French - Native", "English - Fluent"],
     },
@@ -103,6 +104,7 @@ const translations = {
     },
     hero: {
       subtitle: "Ingénieur Fullstack à Bruxelles",
+      relocation: "Mobilité Lille & Paris",
       typingTexts: [
         "J'aime résoudre des problèmes",
         "Si c'est facile, c'est moins fun",

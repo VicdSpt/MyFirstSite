@@ -33,6 +33,8 @@ function SectionSkills() {
                 { icon: "/images/icons/git.png", label: "Git" },
                 { icon: "/images/icons/github.png", label: "GitHub" },
                 { icon: "/images/icons/Mui.png", label: "Mui" },
+                { icon: "/images/icons/mySQL.png", label: "MySQL" },
+                { icon: "/images/icons/Supabase.png", label: "Supabase" },
               ].map(({ icon, label }) => (
                 <div key={label} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-stone-50 dark:bg-zinc-700 dark:text-white border border-gray-200 dark:border-zinc-600 hover:bg-stone-100 dark:hover:bg-zinc-600 hover:border-gray-300">
                   <img src={icon} alt={label} className="h-5 w-5" width={20} height={20} />
