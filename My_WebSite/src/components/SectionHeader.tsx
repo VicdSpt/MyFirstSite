@@ -115,34 +115,34 @@ function SectionHeader() {
         }`}
       >
         <div className="container mx-auto px-4 flex flex-col gap-2">
-          <a
-            href=""
+          <Link
+            to="/"
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 transition-colors rounded-md"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            to="/portfolio"
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
             onClick={() => setIsMenuOpen(false)}
           >
             Portfolio
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            to="/resume"
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
             onClick={() => setIsMenuOpen(false)}
           >
             Resume
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            to="/contact"
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact
-          </a>
+          </Link>
         </div>
       </nav>
     </header>
