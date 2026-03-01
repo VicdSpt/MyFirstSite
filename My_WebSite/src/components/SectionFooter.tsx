@@ -1,4 +1,8 @@
+import { useLanguage } from "../context/LanguageContext";
+
 function SectionFooter() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-slate-200 bottom-0 w-full dark:bg-zinc-900">
       <div className="max-w-5xl  mx-auto px-4 py-6 sm:py-8">
@@ -14,7 +18,7 @@ function SectionFooter() {
               <span className="font-semibold dark:text-white">Victor dSpt</span>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">
-              Full Stack Developer
+              {t.footer.role}
             </p>
           </div>
 

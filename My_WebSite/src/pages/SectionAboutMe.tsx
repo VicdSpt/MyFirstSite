@@ -1,6 +1,9 @@
 import { Link } from "react-router";
+import { useLanguage } from "../context/LanguageContext";
 
 function SectionAboutMe() {
+  const { t } = useLanguage();
+
   return (
     <section className="bg-neutral-100 py-20 dark:bg-zinc-800">
       <div className="max-w-6xl mx-auto px-6">
@@ -19,14 +22,12 @@ function SectionAboutMe() {
 
           {/* Right side - Text */}
           <div className="flex flex-col gap-4 leading-relaxed">
-            <h2 className="text-4xl font-bold dark:text-white">About Me</h2>
+            <h2 className="text-4xl font-bold dark:text-white">{t.about.title}</h2>
 
             <p className="text-justify text-black dark:text-gray-300">
-              After working almost 6 years as a customer support specialist, in
-              different sectors and companies, I decided to change my career
-              path to become a Full Stack Developer. To build a robust technical
-              foundation, I completed two intensive training programs at{" "}
-              <span className="font-bold">Le Wagon</span> and more recently at{" "}
+              {t.about.bioPre}{" "}
+              <span className="font-bold">Le Wagon</span>{" "}
+              {t.about.bioMid}{" "}
               <a
                 href="https://www.wildcodeschool.com/"
                 target="_blank"
@@ -42,7 +43,7 @@ function SectionAboutMe() {
                 to="/moreaboutme"
                 className="px-6 py-3 self-center bg-indigo-500 hover:bg-indigo-600 text-white rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-400"
               >
-                More About Me
+                {t.about.moreAboutMe}
               </Link>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import { useLanguage } from "../context/LanguageContext";
 
 interface MyProjects {
   id: number;
@@ -12,6 +13,7 @@ interface MyProjects {
 }
 
 function PagePortfolio() {
+  const { t } = useLanguage();
   const [projects, setProjects] = useState<MyProjects[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -30,7 +32,7 @@ function PagePortfolio() {
       })
       .catch((error) => {
         console.error("Failed to fetch projects:", error);
-        setError("Failed to load projects. Please try again later.");
+        setError(t.portfolio.loading);
         setLoading(false);
       });
   }, []);
@@ -40,16 +42,18 @@ function PagePortfolio() {
       <div className="w-full mx-auto px-10">
         <header className="mb-5">
           <h1 className="py-20 text-5xl font-bold text-center dark:text-white">
-            My Portfolio
+            {t.portfolio.title}
           </h1>
           <p className="text-center dark:text-gray-200">
-            Discover some of my projects, if you wish to see all of them
-            <br />please visit my <a
+            {t.portfolio.descriptionPre}
+            <br />{t.portfolio.descriptionLinkText}{" "}
+            <a
               href="https://github.com/VicdSpt"
               target="_blank"
               rel="noopener noreferrer"
               className="text-indigo-500 hover:text-indigo-400"
-            > <span>GitHub</span>
+            >
+              <span>GitHub</span>
             </a>
           </p>
         </header>
@@ -57,7 +61,7 @@ function PagePortfolio() {
         <section className="mb-5 py-5 px-4">
           {loading && (
             <p className="text-center text-gray-600 dark:text-gray-300">
-              Loading projects...
+              {t.portfolio.loading}
             </p>
           )}
 
@@ -67,7 +71,7 @@ function PagePortfolio() {
 
           {!loading && !error && projects.length === 0 && (
             <p className="text-center text-gray-600 dark:text-gray-300">
-              No projects found.
+              {t.portfolio.noProjects}
             </p>
           )}
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import Mon_CV from "../assets/MyCV.pdf"
+import Mon_CV from "../assets/MyCV.pdf";
+import { useLanguage } from "../context/LanguageContext";
 
 function SectionHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,6 +9,7 @@ function SectionHeader() {
     const savedMode = localStorage.getItem("mode");
     return savedMode === "dark";
   });
+  const { lang, t, toggleLanguage } = useLanguage();
 
   useEffect(() => {
     if (isDark) {
@@ -45,30 +47,30 @@ function SectionHeader() {
             to="/"
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
           >
-            Home
+            {t.header.nav.home}
           </Link>
           <Link
             to="/portfolio"
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
           >
-            Portfolio
+            {t.header.nav.portfolio}
           </Link>
           <Link
             to="/resume"
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
           >
-            Resume
+            {t.header.nav.resume}
           </Link>
           <Link
             to="/contact"
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
           >
-            Contact
+            {t.header.nav.contact}
           </Link>
         </nav>
 
-        {/* Right side - Download Mon_CV + Theme toggle */}
-        <div className="flex items-center gap-3 ">
+        {/* Right side - Download CV + Language toggle + Theme toggle */}
+        <div className="flex items-center gap-3">
           <a
             href={Mon_CV}
             download="Resume_de_Spirlet_Victor"
@@ -79,8 +81,32 @@ function SectionHeader() {
               alt="Resume icon"
               className="w-5 h-5 dark:invert group-hover:brightness-0 group-hover:invert transition-all"
             />
-            <span className="hidden md:inline">Downlod my CV</span>
+            <span className="hidden md:inline">{t.header.downloadCV}</span>
           </a>
+
+          {/* Language toggle */}
+          <div className="bg-zinc-300 dark:bg-zinc-700 rounded-xl flex p-1">
+            <button
+              onClick={() => lang !== "en" && toggleLanguage()}
+              className={`px-2 py-1 rounded-lg text-xs font-bold cursor-pointer transition-colors dark:text-white ${
+                lang === "en"
+                  ? "bg-white dark:bg-zinc-800 shadow"
+                  : "hover:bg-zinc-200 dark:hover:bg-zinc-600"
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => lang !== "fr" && toggleLanguage()}
+              className={`px-2 py-1 rounded-lg text-xs font-bold cursor-pointer transition-colors dark:text-white ${
+                lang === "fr"
+                  ? "bg-white dark:bg-zinc-800 shadow"
+                  : "hover:bg-zinc-200 dark:hover:bg-zinc-600"
+              }`}
+            >
+              FR
+            </button>
+          </div>
 
           {/* Theme toggle */}
           <div className="bg-zinc-300 dark:bg-zinc-700 hover:text-whitep-1 rounded-xl flex p-1">
@@ -120,28 +146,28 @@ function SectionHeader() {
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 transition-colors rounded-md"
             onClick={() => setIsMenuOpen(false)}
           >
-            Home
+            {t.header.nav.home}
           </Link>
           <Link
             to="/portfolio"
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
             onClick={() => setIsMenuOpen(false)}
           >
-            Portfolio
+            {t.header.nav.portfolio}
           </Link>
           <Link
             to="/resume"
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
             onClick={() => setIsMenuOpen(false)}
           >
-            Resume
+            {t.header.nav.resume}
           </Link>
           <Link
             to="/contact"
             className="bg-slate-300 dark:bg-zinc-700 dark:text-white py-2 px-4 hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors rounded-md"
             onClick={() => setIsMenuOpen(false)}
           >
-            Contact
+            {t.header.nav.contact}
           </Link>
         </div>
       </nav>

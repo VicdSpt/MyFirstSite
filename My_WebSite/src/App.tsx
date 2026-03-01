@@ -4,6 +4,7 @@ import { Outlet, useLocation } from "react-router";
 
 import SectionHeader from "./components/SectionHeader.tsx";
 import SectionFooter from "./components/SectionFooter.tsx";
+import { LanguageProvider } from "./context/LanguageContext.tsx";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -17,14 +18,16 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <ScrollToTop />
-      <SectionHeader />
-      <main className="grow flex flex-col">
-        <Outlet />
-      </main>
-      <SectionFooter />
-    </div>
+    <LanguageProvider>
+      <div className="min-h-screen flex flex-col">
+        <ScrollToTop />
+        <SectionHeader />
+        <main className="grow flex flex-col">
+          <Outlet />
+        </main>
+        <SectionFooter />
+      </div>
+    </LanguageProvider>
   );
 }
 

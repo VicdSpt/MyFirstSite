@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { Briefcase, GraduationCap, Code, Download } from "lucide-react";
 import Mon_CV from "../assets/MyCV.pdf";
+import { useLanguage } from "../context/LanguageContext";
 
 interface TimelineItem {
   id: number;
@@ -13,6 +14,7 @@ interface TimelineItem {
 }
 
 const MyTimeline = () => {
+  const { t } = useLanguage();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -123,7 +125,7 @@ const MyTimeline = () => {
   const formatDate = (dateString: string) => {
     if (dateString === "Present") return "Present";
     const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", {
+    return date.toLocaleDateString(t.resume.locale, {
       month: "short",
       year: "numeric",
     });
@@ -185,10 +187,10 @@ const MyTimeline = () => {
         {/* Header */}
         <div className="text-center mb-10 sm:mb-14 md:mb-20">
           <h1 className="pt-20 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3">
-            My Professional Journey
+            {t.resume.title}
           </h1>
           <p className="text-sm sm:text-base text-gray-400 dark:text-gray-500 mt-3">
-            👆 Swipe or drag to explore
+            {t.resume.swipeHint}
           </p>
         </div>
 
@@ -230,7 +232,7 @@ const MyTimeline = () => {
                       <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 border-t dark:border-gray-700 pt-2 sm:pt-3">
                         <div>{formatDate(item.startDate)}</div>
                         <div className="text-gray-400 dark:text-gray-500">
-                          to
+                          {t.resume.to}
                         </div>
                         <div>{formatDate(item.endDate)}</div>
                       </div>
@@ -263,17 +265,17 @@ const MyTimeline = () => {
               <div className="flex flex-col items-center min-w-44 sm:min-w-52 md:min-w-60">
                 <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 rounded-xl p-4 sm:p-5 md:p-6 border-2 border-blue-200 dark:border-blue-700 shadow-md dark:shadow-gray-900/50 w-44 sm:w-52 md:w-60 mb-5 sm:mb-7">
                   <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900 dark:text-white text-center">
-                    Today
+                    {t.resume.today}
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 text-center mt-2">
-                    {new Date().toLocaleDateString("en-US", {
+                    {new Date().toLocaleDateString(t.resume.locale, {
                       month: "short",
                       day: "numeric",
                       year: "numeric",
                     })}
                   </p>
                   <p className="text-xs sm:text-sm text-purple-600 dark:text-purple-400 font-medium text-center mt-2 sm:mt-3">
-                    Currently at Wild Code School
+                    {t.resume.currentlyAt}
                   </p>
                 </div>
                 <div className="bg-gradient-to-br from-blue-500 to-purple-500 rounded-full p-3 sm:p-4 text-white shadow-lg">
@@ -292,13 +294,13 @@ const MyTimeline = () => {
           <div className="flex items-center gap-3">
             <div className="w-4 sm:w-5 h-4 sm:h-5 bg-purple-500 rounded-full"></div>
             <span className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300">
-              Education
+              {t.resume.education}
             </span>
           </div>
           <div className="flex items-center gap-3">
             <div className="w-4 sm:w-5 h-4 sm:h-5 bg-blue-500 rounded-full"></div>
             <span className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300">
-              Work Experience
+              {t.resume.workExperience}
             </span>
           </div>
         </div>
@@ -311,7 +313,7 @@ const MyTimeline = () => {
             className="group flex items-center gap-3 py-3 px-6 rounded-lg bg-linear-to-r from-blue-500 to-purple-500 text-white font-medium hover:from-blue-600 hover:to-purple-600 shadow-lg hover:shadow-xl transition-all"
           >
             <Download className="w-5 h-5" />
-            <span>Download My CV</span>
+            <span>{t.resume.downloadCV}</span>
           </a>
         </div>
       </div>

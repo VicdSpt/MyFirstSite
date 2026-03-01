@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
+import { useLanguage } from "../context/LanguageContext";
 
 interface TypingAnimationProps {
   text: string;
@@ -39,18 +40,18 @@ function TypingAnimation({
 }
 
 function SectionFullStackBxl() {
-  const [textToType, setTextToType] = useState(0);
-  const myTexts = [
-    "I like Solving Problems",
-    "If it's Easy, it's not Fun",
-    "Debugging is Part of the Fun",
-    "Work is a Pleasure",
-    "Building Fun Stuff for People",
-    "Learning Every Day",
-  ];
+  const { t, lang } = useLanguage();
+  const [{ textToType, activeLang }, setTypingState] = useState({ textToType: 0, activeLang: lang });
+
+  if (activeLang !== lang) {
+    setTypingState({ textToType: 0, activeLang: lang });
+  }
 
   const handleTypingComplete = () => {
-    setTextToType((prev) => (prev + 1) % myTexts.length);
+    setTypingState((prev) => ({
+      textToType: (prev.textToType + 1) % t.hero.typingTexts.length,
+      activeLang: lang,
+    }));
   };
 
   return (
@@ -63,7 +64,7 @@ function SectionFullStackBxl() {
               Victor de Spirlet
             </h1>
             <p className="flex items-center gap-2 text-xl font-semibold dark:text-gray-200">
-              Fullstack Engineer in Brussels
+              {t.hero.subtitle}
               <img
                 src="/images/icons/BE.svg"
                 alt="Belgium"
@@ -74,8 +75,8 @@ function SectionFullStackBxl() {
             </p>
             <p className="text-lg dark:text-gray-300">
               <TypingAnimation
-                key={textToType}
-                text={myTexts[textToType]}
+                key={`${lang}-${textToType}`}
+                text={t.hero.typingTexts[textToType]}
                 speed={75}
                 className="text-orange-700 dark:text-indigo-500"
                 onComplete={handleTypingComplete}
@@ -86,7 +87,7 @@ function SectionFullStackBxl() {
           {/* Right side - Paragraphs */}
           <div className="flex flex-col gap-6 text-black dark:text-gray-300 leading-relaxed lg:w-1/2">
             <p className="text-justify">
-              Currently training as a Full Stack Developer at{" "}
+              {t.hero.bioPre}{" "}
               <a
                 href="https://www.wildcodeschool.com/"
                 target="_blank"
@@ -95,20 +96,13 @@ function SectionFullStackBxl() {
               >
                 Wild Code School
               </a>
-              , I am driven by a strong passion for
-              <span className="font-bold"> problem solving</span> and
-              <span className="font-bold"> debugging</span> complex challenges to
-              build reliable, high-quality web applications.
-              <br /> I enjoy transforming ideas into efficient, user-focused
-              solutions while working with modern technologies and continuously
-              learning to improve my knowledge and technical skills. I also
-              value teamwork and collaboration, enjoying the opportunity to
-              build applications and projects with others while exchanging
-              knowledge and staying up to date with the latest technology
-              trends.
-              <br /> Highly motivated and eager to grow, I continuously explore
-              new tools and frameworks to strengthen my skills and expand my
-              technical expertise.
+              {t.hero.bioMid}
+              <span className="font-bold"> {t.hero.bioBold1}</span>
+              {t.hero.bioAnd}
+              <span className="font-bold">{t.hero.bioBold2}</span>
+              {t.hero.bioPost1}
+              <br /> {t.hero.bioP2}
+              <br /> {t.hero.bioP3}
             </p>
             <div className="self-center">
               <Link
@@ -116,7 +110,7 @@ function SectionFullStackBxl() {
                 className="flex items-center gap-2 self-center bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-400"
               >
                 <img src="/images/icons/Square.svg" alt="" />
-                Discover my projects
+                {t.hero.discoverProjects}
               </Link>
             </div>
           </div>

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import emailjs from "@emailjs/browser";
+import { useLanguage } from "../context/LanguageContext";
 
 // TODO: Replace these with your actual EmailJS credentials
-const EMAILJS_SERVICE_ID = "service_6ldgsbf"; 
-const EMAILJS_TEMPLATE_ID = "template_zz9rocs"; 
-const EMAILJS_PUBLIC_KEY = "2tOC2UrAMNXIOtVb7"; 
+const EMAILJS_SERVICE_ID = "service_6ldgsbf";
+const EMAILJS_TEMPLATE_ID = "template_zz9rocs";
+const EMAILJS_PUBLIC_KEY = "2tOC2UrAMNXIOtVb7";
 
 interface FormData {
   firstName: string;
@@ -16,6 +17,7 @@ interface FormData {
 }
 
 const ContactPage: React.FC = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -78,12 +80,10 @@ const ContactPage: React.FC = () => {
           transition={{ duration: 1.5, ease: "easeInOut" }}
         >
           <h1 className="py-20 text-5xl font-bold text-center text-black dark:text-white">
-            Get in touch
+            {t.contactPage.title}
           </h1>
           <p className="text-black dark:text-gray-200 leading-relaxed">
-            If you would like to connect or discuss potential opportunities,
-            feel free to get in touch. I would be happy to chat and explore how
-            I can add value to your team.
+            {t.contactPage.description}
           </p>
           <div className="flex justify-center mt-6">
             <img src="/images/icons/RHB.gif" alt="Robin Hood" className="rounded-2xl" />
@@ -103,7 +103,7 @@ const ContactPage: React.FC = () => {
                   htmlFor="firstName"
                   className="block text-sm font-medium text-black dark:text-white mb-2"
                 >
-                  First name
+                  {t.contactPage.firstName}
                 </label>
                 <input
                   type="text"
@@ -121,7 +121,7 @@ const ContactPage: React.FC = () => {
                   htmlFor="lastName"
                   className="block text-sm font-medium text-black dark:text-white mb-2"
                 >
-                  Last name
+                  {t.contactPage.lastName}
                 </label>
                 <input
                   type="text"
@@ -140,7 +140,7 @@ const ContactPage: React.FC = () => {
                 htmlFor="email"
                 className="block text-sm font-medium text-black dark:text-white mb-2"
               >
-                Email
+                {t.contactPage.email}
               </label>
               <input
                 type="email"
@@ -158,7 +158,7 @@ const ContactPage: React.FC = () => {
                 htmlFor="phone"
                 className="block text-sm font-medium text-black dark:text-white mb-2"
               >
-                Phone number
+                {t.contactPage.phone}
               </label>
               <input
                 type="tel"
@@ -176,7 +176,7 @@ const ContactPage: React.FC = () => {
                 htmlFor="message"
                 className="block text-sm font-medium text-black dark:text-white mb-2"
               >
-                Message
+                {t.contactPage.message}
               </label>
               <textarea
                 id="message"
@@ -195,16 +195,16 @@ const ContactPage: React.FC = () => {
                 disabled={status === "sending"}
                 className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-slate-900 cursor-pointer disabled:cursor-not-allowed"
               >
-                {status === "sending" ? "Sending..." : "Send message"}
+                {status === "sending" ? t.contactPage.sending : t.contactPage.send}
               </button>
               {status === "success" && (
                 <p className="text-green-600 dark:text-green-400 font-medium">
-                  Message sent successfully!
+                  {t.contactPage.success}
                 </p>
               )}
               {status === "error" && (
                 <p className="text-red-600 dark:text-red-400 font-medium">
-                  Failed to send message. Please try again.
+                  {t.contactPage.error}
                 </p>
               )}
             </div>
