@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import Mon_CV from "../assets/MyCV.pdf";
+import Mon_CV from "../assets/Resume_VictordS_2026.pdf";
 import { useLanguage } from "../context/LanguageContext";
 
 function SectionHeader() {
