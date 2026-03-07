@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { Briefcase, GraduationCap, Code, Download } from "lucide-react";
-import Mon_CV from "../assets/MyCV.pdf";
+import myResume from "../assets/Resume_VictordS_2026.pdf";
 import { useLanguage } from "../context/LanguageContext";
 
 interface TimelineItem {
@@ -308,7 +308,7 @@ const MyTimeline = () => {
         {/* Download CV Button */}
         <div className="flex justify-center mt-10 sm:mt-14 md:mt-20">
           <a
-            href={Mon_CV}
+            href={myResume}
             download="Resume_de_Spirlet_Victor"
             className="group flex items-center gap-3 py-3 px-6 rounded-lg bg-linear-to-r from-blue-500 to-purple-500 text-white font-medium hover:from-blue-600 hover:to-purple-600 shadow-lg hover:shadow-xl transition-all"
           >
