@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import Mon_CV from "../assets/Resume_VictordS_2026.pdf";
+import myResume from "../assets/Resume_VictordS_2026.pdf";
 import { useLanguage } from "../context/LanguageContext";
 
 function SectionHeader() {
@@ -72,7 +72,7 @@ function SectionHeader() {
         {/* Right side - Download CV + Language toggle + Theme toggle */}
         <div className="flex items-center gap-3">
           <a
-            href={Mon_CV}
+            href={myResume}
             download="Resume_de_Spirlet_Victor"
             className="group flex items-center gap-2 py-2 px-4 rounded-md bg-slate-300 dark:bg-zinc-700 dark:text-white hover:bg-slate-500 dark:hover:bg-zinc-600 hover:text-white transition-colors whitespace-nowrap"
           >
